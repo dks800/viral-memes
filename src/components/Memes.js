@@ -12,7 +12,7 @@ function Memes(props) {
                         <Card.Img variant="top" src={meme.url} />
                         <Card.Body>
                             <Card.Title>{ meme.name }</Card.Title>
-                            <Button variant="success" onClick={() => window.open(meme.url, "_blank")}>Download Meme</Button>
+                            <Button variant="success" onClick={() => window.open(meme.url, "_blank")}>Download</Button>
                         </Card.Body>
                     </Card>
                 ))
