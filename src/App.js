@@ -7,13 +7,12 @@ function App() {
   const [allMemes, setAllMemes] = useState([]);
   
   function loadMoreMemes(){
+    if(allMemes.length === memes.length){ return alert("That's all for now!") }
     let start = 0;
     let end = memes.length + 20;
     let newMemes = [...allMemes].splice(start, end);
     setMemes(newMemes);
-    setTimeout(()=> {
-      window.scrollBy(0,800);
-    }, 1000);
+    setTimeout(()=> { window.scrollBy(0,500) }, 800);
   }
   
   useEffect(() => {
@@ -35,7 +34,6 @@ function App() {
         :
           <h1>Loading Memes... | Be ready!</h1>
       }
-      
     </div>
   );
 }
