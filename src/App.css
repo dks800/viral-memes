@@ -1,5 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
+  background: #cecece;
 }
 
 .App-logo {
@@ -35,4 +41,54 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
+.card {
+  display: inline-block;
+  transition: all 0.2s;
+  margin: 10px;
+  box-shadow: 1px 1px 2px 1px #333333;
+  padding: 10px;
+  border-radius: 5px;
+  background: #79b3b0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 1px 2px 1px #000;
+}
+
+.card:hover .card-body {
+  background: linear-gradient(90deg #cecece #125947);
+}
+
+.card .card-body {
+  width: 200px;
+  white-space: pre-wrap;
+  padding: 5px;
+}
+
+.loadMore {
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.meme-container {
+  background: linear-gradient(256deg, #313550, transparent);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 5px -5px 5px grey;
+}
+
+.meme-page-title {
+  margin:25px;
+  font-family: monospace;
 }
